@@ -216,11 +216,11 @@ Modelo de casos de uso
 
 
 \begin{minipage}[b]{0.2\linewidth}\centering
-	\includegraphics[height=2cm]{actor_empresas}
+	\includegraphics[height=2.25cm]{entidadFinanciera}
 \end{minipage}
 \begin{minipage}[b]{0.8\linewidth}\centering
 	\begin{flushleft}
-	Interactua con el sistema. \\
+Entidad que se encarga de las operaciones de validación que involucran la tarjeta de crédito. \\
 	\end{flushleft}
 \end{minipage}
 
@@ -231,7 +231,7 @@ Modelo de casos de uso
 
 \newpage
 
-\subsubsection{Identificacion de casos de uso}
+\subsubsection{Identificación de casos de uso}
 
 \begin{enumerate}
 \item Contratar tour
@@ -264,6 +264,7 @@ Desarrollo de casos de uso
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} El cliente ahora tiene chequera de pago y un contrato.}\\ \hline
 \end{tabular} \\\\
  \\\\
+
 
 \begin{tabular}{| l | p{0.8\linewidth} |} \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Use Case:} 2 Reservar tours} \\ \hline
@@ -298,15 +299,57 @@ Desarrollo de casos de uso
 
 
 \begin{tabular}{| l | p{0.8\linewidth} |} \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Use Case:} 4 Confeccionar tours} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Use Case:} 4 Mantener Tour} \\\hline
 	\multicolumn{2}{|c|}{} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci\'on:} El propietario actualiza el paquete.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Actores participantes:} Propietario, Empresas 3eros.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} -} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1-} El propietario contrata nuevos servicios y negocia modificaciones con las empresas.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:}Un nuevo tour ha sido creado.}\\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci\'on:} El propietario modifica tours existentes o ingresa nuevos} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Actores participantes:} Propietario} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} -.} \\ 			    \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujo principal}} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1}  El sistema solicita la actidad a realizar: } \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{  Si la actividad es Alta, ejecutar flujo alternativo A1.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{  Si la actividad es Baja, ejecutar flujo alternativo A2.} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{  Si la actividad es Modificación, ejecutar flujo alternativo A3.} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{  Si la actividad es Salir, terminar caso de uso.} \\ \hline
+
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos alternativos:}	}\\ 			     \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A1: Alta de Tour}} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A1.1:} El sistema solicita ingreso de datos del tour.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A1.2:} El propietario ingresa los datos del tour.
+	} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A1.3:} El sistema almacena los datos del tour.
+	} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A1.4:} Volver al flujo principal.
+	} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2: Baja de Tour}} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.1:} El sistema solicita el ingreso de el ID del tour.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.2:} El propietario ingresa el ID del tour. 
+	} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.3:} El sistema elimina el tour.
+	} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.4:} Volver al flujo principal.
+	} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3: Modificación de Tour}} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3.1:} El sistema solicita el ingreso de el ID del tour.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3.2:} El propietario ingresa el ID del tour. 
+	} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3.3:} El sistema solicita solicita los datos del tour a modificar.
+	} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3.4:} El propietario ingresa los nuevos datos del tour.
+	} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3.5:} El sistema guarda los nuevos datos del tour.
+	} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3.6:} Volver al flujo principal.
+	} \\ \hline
+
+
+
+
 \end{tabular} \\\\
 \\\\\\\\
+
+
+
+
 
 
 
