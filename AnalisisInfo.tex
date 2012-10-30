@@ -215,9 +215,9 @@ Modelo de casos de uso
 \vspace*{1.5cm}
 
 
-\begin{minipage}[b]{0.2\linewidth}\centering
-	\includegraphics[height=2.25cm]{entidadFinanciera}
-\end{minipage}
+%\begin{minipage}[b]{0.2\linewidth}\centering
+%	\includegraphics[height=2.25cm]{entidadFinanciera}
+%\end{minipage}
 \begin{minipage}[b]{0.8\linewidth}\centering
 	\begin{flushleft}
 Entidad que se encarga de las operaciones de validación que involucran la tarjeta de crédito. \\
@@ -257,11 +257,11 @@ Desarrollo de casos de uso
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujo principal}} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1} El cliente contrata un tour.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{2} El vendedor corrobora que la documentación sea correcta.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{3} El vendedor confecciona el contrato y le entrega la chequera el 	cliente.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{3} El vendedor confecciona el contrato y le entrega la chequera al	cliente.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos de excepci\'on}} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{FE.1} La documentación entregada no es correcta} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{FE.2} El vendedor anula la operación} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} El cliente ahora tiene chequera de pago y un contrato.}\\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1} La documentación entregada no es correcta} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1.1} El vendedor anula la operación} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} El cliente ahora tiene chequera de pagos y un contrato.}\\ \hline
 \end{tabular} \\\\
  \\\\
 
@@ -269,9 +269,9 @@ Desarrollo de casos de uso
 \begin{tabular}{| l | p{0.8\linewidth} |} \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Use Case:} 2 Reservar tours} \\ \hline
 	\multicolumn{2}{|c|}{} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci\'on:} El propietario hace las reservas para las excursiones vuelos y hoteles.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci\'on:} El propietario hace las reservas para las excursiones, vuelos y hoteles.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Actores participantes:} Propietario, Cliente, Vendedor.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} El cliente debe tener pagadas todas las cuotas} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} El cliente debe tener todas las cuotas pagas} \\ \hline
 	\multicolumn{2}{|c|}{} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos}} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujo principal}} \\ \hline
@@ -279,7 +279,7 @@ Desarrollo de casos de uso
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{2-} El vendedor se fija que el cliente tenga todas las cuotas pagas y la chequera sellada.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{3-} El vendedor comunica al propietario que ya puede efectuar las reservas.} \\ \hline
 		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{4-} El propietario efectua las reservas.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} El cliente ahora tiene la orden de servcio y se realizaron las reservas pertinentes.}\\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} El cliente ahora tiene la orden de servicio y se realizaron las reservas pertinentes.}\\ \hline
 \end{tabular} \\\\
  \\\\
 
@@ -287,12 +287,15 @@ Desarrollo de casos de uso
 \begin{tabular}{| l | p{0.8\linewidth} |} \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Use Case:} 3 Confeccionar y enviar publicidad} \\ \hline
 	\multicolumn{2}{|c|}{} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci\'on:} El vendedor envia a los clientes las promociones y ofertas de la agencia.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci\'on:} El vendedor envía a los clientes las promociones y ofertas de la agencia.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Actores participantes:} Vendedor, Actor temporal.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} Se tiene una lista de clientes usuales} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1-} El vendedor envia al cliente las promociones de la agencia por medio de un actor temporal.} \\
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{2-} El actor temporal distribuye las promociones.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{3-} El vendedor comunica al pripietario que ya puede efectuar las reservas.}\\ \hline
+	\multicolumn{2}{|c|}{} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos}} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujo principal}} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1} El vendedor envía al cliente las promociones de la agencia por medio de un actor temporal.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{2} El actor temporal distribuye las promociones.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{3} El vendedor comunica al propietario que ya puede efectuar las reservas.}\\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} El cliente está enterado de las útimas novedades de la agencia.}\\ \hline
 \end{tabular} \\\\
 \\\\\\\\
@@ -305,7 +308,7 @@ Desarrollo de casos de uso
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Actores participantes:} Propietario} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} -.} \\ 			    \hline
 		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujo principal}} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1}  El sistema solicita la actidad a realizar: } \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1}  El sistema solicita la actividad a realizar: } \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{  Si la actividad es Alta, ejecutar flujo alternativo A1.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{  Si la actividad es Baja, ejecutar flujo alternativo A2.} \\ \hline
 		\multicolumn{2}{|p{0.8\linewidth}|}{  Si la actividad es Modificación, ejecutar flujo alternativo A3.} \\ \hline
@@ -321,7 +324,7 @@ Desarrollo de casos de uso
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A1.4:} Volver al flujo principal.
 	} \\ \hline
 		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2: Baja de Tour}} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.1:} El sistema solicita el ingreso de el ID del tour.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.1:} El sistema solicita el ingreso del ID del tour.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.2:} El propietario ingresa el ID del tour. 
 	} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.3:} El sistema elimina el tour.
@@ -329,7 +332,7 @@ Desarrollo de casos de uso
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.4:} Volver al flujo principal.
 	} \\ \hline
 		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3: Modificación de Tour}} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3.1:} El sistema solicita el ingreso de el ID del tour.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3.1:} El sistema solicita el ingreso del ID del tour.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3.2:} El propietario ingresa el ID del tour. 
 	} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3.3:} El sistema solicita solicita los datos del tour a modificar.
@@ -342,15 +345,44 @@ Desarrollo de casos de uso
 	} \\ \hline
 
 
-
-
 \end{tabular} \\\\
 \\\\\\\\
 
 
-
-
-
+\begin{tabular}{| l | p{0.8\linewidth} |} \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Use Case:} 5 Pagar cuota} \\ \hline
+	\multicolumn{2}{|c|}{} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci\'on:} El cliente paga una cuota de un tour.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Actores participantes:} Cliente, Tesorería, Entidad Financiera.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} Debe haberse ejecutado el caso de uso “Contratar tour”.} \\ \hline
+	\multicolumn{2}{|c|}{} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos}} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujo principal}} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1} El cliente elige cuota a pagar.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{2} El sistema solicita el medio de pago.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{3} Cliente elige medio de pago.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{4} Si medio de pago = “Efectivo” ejecutar subflujo A1: “Abonar en efectivo”.} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{5} Si medio de pago = “Tarjeta de crédito” ejecutar subflujo A2: “Abonar con tarjeta de crédito”.} \\ \hline
+			\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{6} Tesorería registra la cuota como pagada y emite recibo en la chequera de cuotas.} \\ \hline
+			\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos alternativos}	}\\ 			     \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A1:} Abonar en efectivo} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A1.1:} El cliente abona en Tesorería el monto en efectivo.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A1.2:} El cliente recibe el talón correspondiente a la cuota sellado.} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2:} Abonar con tarjeta de crédito} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.1:} El sistema solicita los datos de la tarjeta de crédito.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.2:} El cliente ingresa los datos de la tarjeta de crédito.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.3:} El sistema envía los datos a la entidad financiera.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.4:} La entidad financiera valida los datos y devuelve un resultado al sistema (E1)} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2.5:} El cliente realiza el pago con tarjeta de crédito.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos de excepci\'on}} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1} Tarjeta de crédito inválida} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1.1:} El sistema informa que los datos son incorrectos y solicita nuevamente los datos de tarjeta de crédito} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1.2:} El cliente ingresa los datos de su tarjeta de crédito o cancela.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1.3:} Si ingresa cancelar, finaliza el caso de uso.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1.4:} Si ingresa los datos nuevamente se vuelve al subflujo: A2.3.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} Cuota pagada o datos inválidos.}\\ \hline
+\end{tabular} \\\\
+ \\\\
 
 
 \subsubsection{Diagrama de casos de usos}
