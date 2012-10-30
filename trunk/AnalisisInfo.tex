@@ -96,11 +96,11 @@ Las actividades son: organizar y vender paquetes turísticos, realizar contratos
 
 \begin{itemize}
 \item[•] Confección de contratos
-\item[•] Recepción de pagos.
+\item[•] Recepción de pagos
 \item[•] Confección de talonarios
 \item[•] Armado de tours
-\item[•] Reservacion de hoteles, excursiones, vuelos, micros
-\item[•] Publcidad
+\item[•] Reservación de hoteles, excursiones, vuelos y micros
+\item[•] Publicidad
 \item[•] Promociones
 \end{itemize}
 
@@ -109,13 +109,12 @@ Las actividades son: organizar y vender paquetes turísticos, realizar contratos
 \subsection{Hipótesis y supuestos}
 
 \begin{itemize}
-\item[•] Pago de tours en una única moneda pesos argentinos, efectivo o tarjeta.
+\item[•] Pago de tours en una única moneda (pesos argentinos) en efectivo o con tarjeta de crédito.
 \item[•] Pagos en cuotas sin interés.
-\item[•] El pago de las cuotas es mensual.
-\item[•] Pagos del 1 al 10 de cada mes.
+\item[•] El pago de las cuotas es mensual del 1 al 10 de cada mes.
 \item[•] Devoluciones o cancelaciones de paquetes turísticos con 30 días de anticipación.
-\item[•] Los hoteles, vuelos y excursiones están sujetos a la disponibilidad de los mismos y pueden ser modificados  tratandose siempre de respetar las fechas y categorías elegidas por el cliente.
-\item[•] A la primer cuota paga, la gerencia realiza las contrataciones/reservas pertinentes.
+\item[•] Los hoteles, vuelos y excursiones están sujetos a la disponibilidad de los mismos y pueden ser modificados  tratándose siempre de respetar las fechas y categorías elegidas por el cliente.
+\item[•] Luego de la primer cuota paga, la gerencia realiza las contrataciones/reservas pertinentes.
 \item[•] La gerencia puede realizar todo tipo de cancelación.
 \end{itemize}
 
@@ -172,7 +171,7 @@ Modelo de casos de uso
 \end{minipage}
 \begin{minipage}[b]{0.8\linewidth}\centering
 	\begin{flushleft}
-	Persona encargada de confeccionar contratos con el cliente, armar tours, comunicarse con el cliente y efectuar anulaciones. \\
+	Persona encargada de confeccionar contratos con el cliente, armar tours, comunicarse con el cliente y efectuar cancelaciones. \\
 	\end{flushleft}
 \end{minipage}
 
@@ -184,7 +183,7 @@ Modelo de casos de uso
 \end{minipage}
 \begin{minipage}[b]{0.8\linewidth}\centering
 	\begin{flushleft}
-	Persona propetaria de la agencia, realiza reservas hoteleras, contrata excursiones y reserva vuelos y micros. Informa a los vendedores sobre las contrataciones de servicios y modificaciones de reservas. \\
+	Persona propietaria de la agencia, encargada de realizar reservas hoteleras, contratar excursiones y reservar vuelos y micros. Informa a los vendedores sobre las contrataciones de servicios y modificaciones de reservas. \\
 	\end{flushleft}
 \end{minipage}
 
@@ -237,7 +236,9 @@ Entidad que se encarga de las operaciones de validación que involucran la tarje
 \item Contratar tour
 \item Reservar tours
 \item Confeccionar y enviar publicidad
+\item Mantener tour
 \item Pagar cuota
+\item Confeccionar paquetes
 \end{enumerate}
 
 
@@ -249,19 +250,19 @@ Desarrollo de casos de uso
 \begin{tabular}{| l | p{0.8\linewidth} |} \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Use Case:} 1 Contratar tour} \\ \hline
 	\multicolumn{2}{|c|}{} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci\'on:} Se le entrega un contrato al cliente y  la chequera de pagos.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci\'on:} El cliente contrata un tour.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Actores participantes:} Cliente, Vendedor.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} El cliente debe haber entregado la documentación necesaria.} \\ \hline
 	\multicolumn{2}{|c|}{} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos}} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujo principal}} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1} El cliente contrata un tour.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{2} El vendedor corrobora que la documentación sea correcta.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{3} El vendedor confecciona el contrato y le entrega la chequera al	cliente.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1} El vendedor corrobora que la documentación sea correcta.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{2} El vendedor confecciona el contrato y le entrega la chequera al	cliente.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{3} Fin del caso de uso.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos de excepci\'on}} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1} La documentación entregada no es correcta} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1.1} El vendedor anula la operación} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} El cliente ahora tiene chequera de pagos y un contrato.}\\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} Se le entrega un contrato al cliente y la chequera de pagos o se anula la contratación.}\\ \hline
 \end{tabular} \\\\
  \\\\
 
@@ -271,14 +272,19 @@ Desarrollo de casos de uso
 	\multicolumn{2}{|c|}{} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci\'on:} El propietario hace las reservas para las excursiones, vuelos y hoteles.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Actores participantes:} Propietario, Cliente, Vendedor.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} El cliente debe tener todas las cuotas pagas} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} Se debe haber ejecutado el caso de uso “Contratar tour”.} \\ \hline
 	\multicolumn{2}{|c|}{} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos}} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujo principal}} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1-} El cliente va a la agencia para pedir el talonario de servicio.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{2-} El vendedor se fija que el cliente tenga todas las cuotas pagas y la chequera sellada.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{3-} El vendedor comunica al propietario que ya puede efectuar las reservas.} \\ \hline
-		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{4-} El propietario efectua las reservas.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1} El cliente va a la agencia para pedir el talonario de servicio.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{2} El vendedor se fija que el cliente tenga todas las cuotas pagas y la chequera sellada.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{3} El vendedor comunica al propietario que ya puede efectuar las reservas.} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{4} El propietario efectúa las reservas.} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{5} El propietario comunica al vendedor que las reservas ya fueron efectuadas.} \\ \hline
+			\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos de excepci\'on}} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1} El cliente no tiene todas las cuotas pagas} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1.1} El vendedor comunica al cliente que debe dirigirse a Tesorería a abonar las cuotas impagas} \\ \hline
+
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} El cliente ahora tiene la orden de servicio y se realizaron las reservas pertinentes.}\\ \hline
 \end{tabular} \\\\
  \\\\
@@ -295,7 +301,6 @@ Desarrollo de casos de uso
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujo principal}} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1} El vendedor envía al cliente las promociones de la agencia por medio de un actor temporal.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{2} El actor temporal distribuye las promociones.} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{3} El vendedor comunica al propietario que ya puede efectuar las reservas.}\\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} El cliente está enterado de las útimas novedades de la agencia.}\\ \hline
 \end{tabular} \\\\
 \\\\\\\\
@@ -306,7 +311,7 @@ Desarrollo de casos de uso
 	\multicolumn{2}{|c|}{} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci\'on:} El propietario modifica tours existentes o ingresa nuevos} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Actores participantes:} Propietario} \\ \hline
-	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} -.} \\ 			    \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} Se debe haber ejecutado el caso de uso “Confeccionar paquetes”.} \\ 			    \hline
 		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujo principal}} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1}  El sistema solicita la actividad a realizar: } \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{  Si la actividad es Alta, ejecutar flujo alternativo A1.} \\ \hline
@@ -343,6 +348,7 @@ Desarrollo de casos de uso
 	} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A3.6:} Volver al flujo principal.
 	} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} Los datos de los tours se encuentran actualizados.}\\ \hline
 
 
 \end{tabular} \\\\
@@ -381,6 +387,28 @@ Desarrollo de casos de uso
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1.3:} Si ingresa cancelar, finaliza el caso de uso.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{E1.4:} Si ingresa los datos nuevamente se vuelve al subflujo: A2.3.} \\ \hline
 	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} Cuota pagada o datos inválidos.}\\ \hline
+\end{tabular} \\\\
+ \\\\
+ 
+\begin{tabular}{| l | p{0.8\linewidth} |} \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Use Case:} 6 Confeccionar paquetes} \\ \hline
+	\multicolumn{2}{|c|}{} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci\'on:} El propietario gestiona la contratación de nuevos tours.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Actores participantes:} Propietario, Vendedor.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pre-condiciones:} -.} \\ \hline
+	\multicolumn{2}{|c|}{} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos}} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujo principal}} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{1} El propietario consulta la disponibilidad de servicios.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{2} Si hay nuevos servicios disponibles ejecutar flujo A1.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{3} Si hay modificaciones en servicios existentes ejecutar flujo A2.} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{4} El propietario comunica al vendedor la existencia de nuevos servicios y/o la modificación de reservas existentes.} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{5} El vendedor confecciona un nuevo tour en base a los nuevos servicios disponibles y/o modifica reservas existentes.} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{6} Fin de caso de uso.} \\ \hline
+			\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Flujos alternativos}	}\\ 			     \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A1:} El propietario contrata nuevos servicios} \\ \hline
+		\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{A2:} El propietario negocia las modificaciones de servicios} \\ \hline
+	\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Post-condiciones:} Se agregaron nuevos tours y/o se modificaron tours existentes.}\\ \hline
 \end{tabular} \\\\
  \\\\
 
