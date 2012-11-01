@@ -42,7 +42,7 @@
 
 
 % Document properties
-\title{Facultad de Ingeniería\\Análisis de la información (75.09)}
+\title{Facultad de Ingeniería\\Análisis de la información (75.09) \\ Grupo 08}
 \date{\today}
 \hypersetup{
   colorlinks = true,
@@ -412,20 +412,72 @@ Desarrollo de casos de uso
 \end{tabular} \\\\
  \\\\
 
+\newpage
 
 \subsubsection{Diagrama de casos de usos}
  
 \begin{figure}[htb]
-\centerline{\includegraphics[width=1.0\textwidth]{diagramaCasosDeUso}}
+\centerline{\includegraphics[width=0.8\textwidth]{diagramaCasosDeUso}}
 \label{fig:celda}
 \end{figure}
  
- 
- 
+ \newpage
+
 \section{Modelos de clases}
 
-Diagramas de clases  
+
+\subsection{Clases de entidad}
+
+
+\begin{tabular}{|l|l|}
+\hline 
+\textbf{Clases} & \textbf{Descripción} \\ 
+\hline 
+Cliente & Usuario del sistema que compra tours. \\ 
+\hline 
+Contrato & Especifica las condiciones en la contratación de un tour. \\ 
+\hline 
+Chequera de cuotas & Cuotas correspondientes a un contrato confeccionado. \\ 
+\hline 
+Tour & Tour que puede ser contratado por un cliente. \\ 
+\hline 
+Talonario & Contiene todo lo referido al tour una vez abonnado el mismo. \\ 
+\hline 
+Tarjeta de crédito &  Medio de pago disponible para el cliente.\\ 
+\hline 
+Proveedor & Entidad que presta servicios.\\ 
+\hline dd
+\end{tabular} 
+
+
+\newpage
+\subsection{Diagramas de clases}
  
+\begin{figure}[htb]
+\centerline{\includegraphics[width=0.8\textwidth]{diagramaDeClasesIRTOUR}}
+\label{fig:celda}
+\end{figure}  
+
+
+\section{Diagramas de interacción}
+\subsection{Diagrama de secuencia} 
+ 
+ 
+\begin{figure}[htb]
+\centerline{\includegraphics[width=0.8\textwidth]{SecuenciaV2}}
+\label{fig:celda}
+\end{figure}  
+
+\newpage
+\subsection{Diagrama de colaboración} 
+
+
+\begin{figure}[htb]
+\centerline{\includegraphics[width=0.8\textwidth]{colaboracion}}
+\label{fig:celda}
+\end{figure}  
+
+
  
 
 \end{document}
